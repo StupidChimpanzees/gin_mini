@@ -1,0 +1,53 @@
+app:
+  name: "test"
+  version: "1.0.0"
+  port: 8082
+database:
+  db_type: "mysql"
+  name: "test"
+  host: 127.0.0.1
+  port: 3306
+  username: "root"
+  password: "123456"
+  charset: "utf8mb4"
+  pool:
+    enable: true
+cache:
+  cache_type: "redis"
+  host: 127.0.0.1
+  port: 6379
+  password: ""
+  prefix: ""
+  timeout: 0
+redis:
+  host: 127.0.0.1
+  port: 6379
+  password: ""
+  prefix: ""
+  select: 1
+  pool:
+    enable: false
+cookie:
+  expire: 1209600
+  path: "/"
+  secure: false
+  http_only: true
+session:
+  secret: "8621E77D22F0830A46B462E3F46ED917"
+  expire: 1209600
+  session_name: "session_8621E"
+jwt:
+  sign_key: "j1kWID03f_CiELe0fPL"
+  expires: 7200
+  issued: 0
+  refresh_expires: 259200
+view:
+  temp_path: "public/template/**/*"
+  static_path: "public/assets"
+  delim_begin: "{{"
+  delim_end: "}}"
+log:
+  level: "warning"
+  path: "runtime/log/{date}/"
+  format: "date|time"
+  console_print: true
